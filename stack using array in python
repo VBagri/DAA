@@ -1,0 +1,29 @@
+class StackArray:
+    def __init__(self):
+        self.stack = []
+
+    def is_empty(self):
+        return len(self.stack) == 0
+
+    def push(self, data):
+        self.stack.append(data)
+
+    def pop(self):
+        if self.is_empty():
+            return None
+        return self.stack.pop()
+
+    def peek(self):
+        if self.is_empty():
+            return None
+        return self.stack[-1]
+
+# Example Usage:
+stack_array = StackArray()
+stack_array.push(1)
+stack_array.push(2)
+stack_array.push(3)
+
+print("Stack using Array:")
+while not stack_array.is_empty():
+    print(stack_array.pop())
